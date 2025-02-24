@@ -2,13 +2,18 @@ import flask
 from flask import request, jsonify
 import joblib
 import pandas as pd
+import sklearn
+import gzip
+import os
 
 # Initialisation de Flask
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-# Charger le modèle
-model = joblib.load('/home/utilisateur/Documents/About_Me/Academiques/Formation/Formation_Data_Scientist/P7/best_rf.pkl')
+# Charger le modèle compressé
+model_path = 'best_rf.pkl.gz'  # Utilise le chemin relatif du fichier
+with gzip.open(model_path, 'rb') as f:
+    model = joblib.load(f)
 print(model)
 
 # Charger les données de test (exemple)
