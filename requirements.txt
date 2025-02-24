@@ -2,5 +2,5 @@ flask
 joblib
 pandas
 scikit-learn
-import gzip
-import os
+gzip
+os
