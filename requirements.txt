@@ -2,5 +2,4 @@ flask
 joblib
 pandas
 scikit-learn
-gzip
 os
