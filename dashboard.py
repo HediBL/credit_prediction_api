@@ -1,11 +1,10 @@
 import streamlit as st # type: ignore
 import pandas as pd
 import requests
-import shap
 import plotly.express as px
 import plotly.graph_objects as go
 # Connexion à l'API
-API_URL = "http://localhost:8000"
+API_URL = "https://credit-prediction-api.onrender.com"
 
 def get_prediction(client_id):
     # Appel à l'API pour obtenir la prédiction pour un client
