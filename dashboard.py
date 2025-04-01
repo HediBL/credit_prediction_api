@@ -16,6 +16,7 @@ def get_client_info(client_id):
     return response.json()
 
 # Charger les données de test
+#test_data = pd.read_csv('/home/utilisateur/Documents/About_Me/Academiques/Formation/Formation_Data_Scientist/P8/test_data.csv')
 test_data = pd.read_csv('test_data2.csv')
 
 # Interface Streamlit
